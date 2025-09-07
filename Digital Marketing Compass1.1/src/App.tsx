@@ -13,6 +13,8 @@ import Footer from "@/components/Footer";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import Login from "@/components/Login"
+import Register from "@/components/Register"
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
               <Route path="/work" element={<WorkPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/login" element={<Login/>} />
+              <Route path="/register" element={<Register/> } />
               <Route path="/admin" element={
                 <ProtectedRoute>
                   <AdminDashboard />

@@ -12,7 +12,9 @@ const navigationItems = [
   { name: 'Our Work', href: '/work' },
   { name: 'About Us', href: '/about' },
   { name: 'Contact Us', href: '/contact' },
-  { name: 'Admin', href: '/admin' },
+  { name: 'Login',      href:'/login'},
+
+ /* { name: 'Admin', href: '/admin' }*/
 ];
 
 export default function Navigation() {
@@ -29,7 +31,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden lg:flex items-center space-x-8">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
@@ -48,7 +50,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
+          <SheetTrigger asChild className="lg:hidden">
             <Button variant="ghost" size="sm">
               <Menu className="h-5 w-5" />
             </Button>
